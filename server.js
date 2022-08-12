@@ -16,7 +16,7 @@ app.use(cors())
 app.use(logger('dev'))
 app.use(bodyParser.json());
 app.use('/api/v1',routes)
-const port = 8000 | process.env.PORT
+const port = 8000 || process.env.PORT
 app.listen(port, () => {
-    console.log('Server is running at port 8000');
+    console.log(`Server is running at port ${port} `);
 });
